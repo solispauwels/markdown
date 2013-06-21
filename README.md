@@ -1,5 +1,5 @@
-GitHub Flavored Markdown local preview
-======================================
+GitHub Flavored Markdown preview
+================================
 
 - [Introduction](#introduction)
 - [Requirements](#requirements)
