@@ -5,6 +5,7 @@ GitHub Flavored Markdown local preview
 - [Requirements](#requirements)
 - [Install](#install)
 - [How to use with VIM](#how-to-use-with-vim)
+- [Syntax highlighting](#syntax-highlighting)
 
 Introduction
 ------------
@@ -42,3 +43,11 @@ autocmd BufNewFile,Bufread *.md set cc=80
 ```
 
 This automatically modify the *temp.txt* when you save your *.md* files.
+
+Syntax highlighting
+-------------------
+
+If you are a VIM user and you want syntax highlighting and matching rules for
+Markdowns, look at [this project][vimmarkdown].
+
+[vimmarkdown]: https://github.com/plasticboy/vim-markdown
