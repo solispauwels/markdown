@@ -6,7 +6,7 @@ $.ajax({
   data: JSON.stringify({
     "text": markdown,
     "mode": "gfm",
-    "context": "github/claroline"
+    "context": "solispauwels/markdown"
   })
 })
 .done(

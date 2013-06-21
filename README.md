@@ -1,7 +1,33 @@
-Flavored Markdown local preview
-===============================
+GitHub Flavored Markdown local preview
+======================================
 
-How to use with **vim**:
+- [Introduction](#introduction)
+- [Requirements](#requirements)
+- [Install](#install)
+- [How to use with VIM](#how-to-use-with-vim)
+
+Introduction
+------------
+
+This is a simple *GitHub Flavored Markdown* local preview for PHP users.
+
+Requirements
+------------
+
+- PHP
+- An explorer with JavaScript
+
+Install
+-------
+
+- Simply clone this repository in your localhost
+- Put the contents that you whant to preview in *temp.txt*
+- Open or refresh the page in your browser.
+
+How to use with VIM
+-------------------
+
+In your *vimrc* or *gvimrc*:
 
 ```vim
 "Show the results with F9 key
@@ -15,3 +41,4 @@ autocmd BufWritePost *.md :silent !cp '%:p' '/var/www/markdown/temp.txt'
 autocmd BufNewFile,Bufread *.md set cc=80
 ```
 
+This automatically modify the *temp.txt* when you save your *.md* files.
