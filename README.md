@@ -1,7 +1,7 @@
 Flavored Markdown local preview
 ===============================
 
-How to use with <3 vim <3
+How to use with **vim**:
 
 ```vim
 "Show the results with F9 key
