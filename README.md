@@ -3,6 +3,12 @@ Flavored markdown
 
 Command line tool that output HTML from a github flavored markdown file.
 
+ - [Installation](#installation)
+ - [Global usage](#global-usage)
+ - [Library usage](#library-usage)
+ - [Contribute](#contribute)
+ - [How to use with VIM](#how-to-use-with-vim)
+
 Installation:
 -------------
 
@@ -49,6 +55,11 @@ markdown.html("some *markdown*", function (html) {
 });
 ```
 
+Contribute
+----------
+
+You can find this project at this [GitHub repository][github]
+
 How to use with VIM
 -------------------
 
@@ -68,11 +79,12 @@ autocmd BufNewFile,Bufread *.md set cc=80
 
 This automatically create a temporary file */vat/tmp/markdown.html* when you save your *.md* files.
 
-Syntax highlighting
--------------------
+### Syntax highlighting
 
-If you are a VIM user and you want syntax highlighting and matching rules for
+If you are a VIM user and you want syntax highlighting or matching rules for
 Markdowns, look at [this project][vimmarkdown].
 
 [vimmarkdown]: https://github.com/plasticboy/vim-markdown
+[github]: https://github.com/solispauwels/markdown
+
 
