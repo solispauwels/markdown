@@ -1,0 +1,35 @@
+{
+  "name": "flavored-markdown",
+  "version": "0.1.7",
+  "description": "Command line tool that output HTML from a github flavored markdown file",
+  "author": {
+    "name": "Jorge Solis Pauwels",
+    "email": "jorgeluissolis@gmail.com"
+  },
+  "license": "MIT",
+  "bin": {
+    "flavored-markdown": "./bin/flavored-markdown"
+  },
+  "_id": "flavored-markdown@0.1.5",
+  "scripts": {},
+  "_shasum": "35d2f5cd3906e00d021be17ac1cb45689335a818",
+  "_from": "flavored-markdown@0.1.5",
+  "_npmVersion": "1.4.28",
+  "_nodeVersion": "0.10.33",
+  "_npmUser": {
+    "name": "solispauwels",
+    "email": "jorgeluissolis@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "solispauwels",
+      "email": "jorgeluissolis@gmail.com"
+    }
+  ],
+  "dist": {
+    "shasum": "35d2f5cd3906e00d021be17ac1cb45689335a818",
+    "tarball": "http://registry.npmjs.org/flavored-markdown/-/flavored-markdown-0.1.5.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/flavored-markdown/-/flavored-markdown-0.1.5.tgz"
+}

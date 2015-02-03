@@ -1,29 +1,53 @@
-GitHub Flavored Markdown preview
-================================
+Flavored markdown
+=================
 
-- [Introduction](#introduction)
-- [Requirements](#requirements)
-- [Install](#install)
-- [How to use with VIM](#how-to-use-with-vim)
-- [Syntax highlighting](#syntax-highlighting)
+Command line tool that output HTML from a github flavored markdown file.
 
-Introduction
-------------
+Installation:
+-------------
 
-This is a simple *GitHub Flavored Markdown* local preview for PHP users.
+```sh
+npm intall -g flavored-markdown
+```
 
-Requirements
-------------
+Or
 
-- PHP
-- An explorer with JavaScript
+```sh
+npm intall flavored-markdown
+```
 
-Install
--------
+Global Usage:
+-------------
 
-- Simply clone this repository in your localhost
-- Put the contents that you whant to preview in *temp.txt*
-- Open or refresh the page in your browser.
+```sh
+flavored-markdown < markdown.md > markdown.html
+```
+
+Or
+
+```sh
+flavored-markdown "Some *markdown*" > markdown.html
+```
+
+Library usage:
+--------------
+
+```javascript
+var markdown = require('flavored-markdown');
+markdown.html("some *markdown*", function (html) {
+    console.log(html);
+});
+```
+
+If you want a full html with html tag and css in the header:
+
+```javascript
+var markdown = require('flavored-markdown');
+markdown.useTemplate = true;
+markdown.html("some *markdown*", function (html) {
+    console.log(html);
+});
+```
 
 How to use with VIM
 -------------------
@@ -31,18 +55,18 @@ How to use with VIM
 In your *vimrc* or *gvimrc*:
 
 ```vim
-"Show the results with F9 key
-autocmd BufNewFile,Bufread *.md imap <F9> <esc>:!google-chrome http://localhost/markdown<cr>i
-autocmd BufNewFile,Bufread *.md map <F9> :!google-chrome http://localhost/markdown<cr>
+"Convert to html when save .md files
+autocmd BufWritePost *.md :silent !flavored-markdown < '%:p' > /vat/tmp/markdown.html
 
-"Copy content to temp file when save .md files
-autocmd BufWritePost *.md :silent !cp '%:p' '/var/www/markdown/temp.txt'
+"Show the results with F9 key
+autocmd BufNewFile,Bufread *.md imap <F9> <esc>:!google-chrome /vat/tmp/markdown.html<cr>i
+autocmd BufNewFile,Bufread *.md map <F9> :!google-chrome /vat/tmp/markdown.html<cr>
 
 "put a marker in char 80
 autocmd BufNewFile,Bufread *.md set cc=80
 ```
 
-This automatically modify the *temp.txt* when you save your *.md* files.
+This automatically create a temporary file */vat/tmp/markdown.html* when you save your *.md* files.
 
 Syntax highlighting
 -------------------
@@ -51,3 +75,4 @@ If you are a VIM user and you want syntax highlighting and matching rules for
 Markdowns, look at [this project][vimmarkdown].
 
 [vimmarkdown]: https://github.com/plasticboy/vim-markdown
+
