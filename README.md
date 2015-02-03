@@ -13,13 +13,13 @@ Installation:
 -------------
 
 ```sh
-npm intall -g flavored-markdown
+npm install -g flavored-markdown
 ```
 
 Or
 
 ```sh
-npm intall flavored-markdown
+npm install flavored-markdown
 ```
 
 Global Usage:
