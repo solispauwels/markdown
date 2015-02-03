@@ -67,17 +67,17 @@ In your *vimrc* or *gvimrc*:
 
 ```vim
 "Convert to html when save .md files
-autocmd BufWritePost *.md :silent !flavored-markdown < '%:p' > /vat/tmp/markdown.html
+autocmd BufWritePost *.md :silent !flavored-markdown < '%:p' > /var/tmp/markdown.html
 
 "Show the results with F9 key
-autocmd BufNewFile,Bufread *.md imap <F9> <esc>:!google-chrome /vat/tmp/markdown.html<cr>i
-autocmd BufNewFile,Bufread *.md map <F9> :!google-chrome /vat/tmp/markdown.html<cr>
+autocmd BufNewFile,Bufread *.md imap <F9> <esc>:!google-chrome /var/tmp/markdown.html<cr>i
+autocmd BufNewFile,Bufread *.md map <F9> :!google-chrome /var/tmp/markdown.html<cr>
 
 "put a marker in char 80
 autocmd BufNewFile,Bufread *.md set cc=80
 ```
 
-This automatically create a temporary file */vat/tmp/markdown.html* when you save your *.md* files.
+This automatically create a temporary file */var/tmp/markdown.html* when you save your *.md* files.
 
 ### Syntax highlighting
 

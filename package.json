@@ -1,6 +1,6 @@
 {
   "name": "flavored-markdown",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Command line tool that output HTML from a github flavored markdown file",
   "author": {
     "name": "Jorge Solis Pauwels",
