@@ -1,14 +1,24 @@
 <html>
 <head>
     <title>Readme</title>
-		<link href="https://raw.githubusercontent.com/solispauwels/markdown/master/1.css" media="all" rel="stylesheet" />
-    <link href="https://raw.githubusercontent.com/solispauwels/markdown/master/2.css" media="all" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" media="all" rel="stylesheet" />
+    <style>
+	.markdown-body {
+		box-sizing: border-box;
+		min-width: 200px;
+		max-width: 980px;
+		margin: 0 auto;
+		padding: 45px;
+	}
+
+	@media (max-width: 767px) {
+		.markdown-body {
+			padding: 15px;
+		}
+	}
+    </style>
 </head>
 <body>
-    <div class="container context-loader-container" style="margin-top: 50px; margin-bottom: 50px">
-        <div id="readme" class="blob instapaper_body">
-            <article class="markdown-body entry-content">{{ markdown }}</article>
-        </div>
-    </div>
+    <article class="markdown-body">{{ markdown }}</article>
 </body>
 <html>

@@ -39,20 +39,17 @@ Library usage:
 --------------
 
 ```javascript
-var markdown = require('flavored-markdown');
-markdown.html("some *markdown*", function (html) {
-    console.log(html);
-});
+import Markdown from 'flavored-markdown'
+const markdown = new Markdown()
+markdown.html("some *markdown*").then(html => console.log(html))
 ```
 
 If you want a full html with html tag and css in the header:
 
 ```javascript
-var markdown = require('flavored-markdown');
-markdown.useTemplate = true;
-markdown.html("some *markdown*", function (html) {
-    console.log(html);
-});
+import Markdown from 'flavored-markdown'
+const markdown = new Markdown(true)
+markdown.html("some *markdown*").then(html => console.log(html))
 ```
 
 Contribute
