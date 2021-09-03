@@ -1,6 +1,7 @@
 import fetch from 'node-fetch'
 import fs from 'fs'
-// import path from 'path'
+import { dirname, normalize, join } from 'path'
+import { fileURLToPath } from 'url'
 
 /**
  * Flavored markdown library.
@@ -18,7 +19,7 @@ export default class Markdown {
     this.markdownMode = markdownMode
     this.context = context
 
-    // this.templateFile = path.normalize(path.join(__dirname, 'template.html'))
+    this.templateFile = normalize(join(dirname(fileURLToPath(import.meta.url)), 'template.html'))
     this.headings = /<h([1-6])>(.*?)<\/h([1-6])>/g
     this.reference = /[^a-zA-Z0-9-]/g
     this.spaces = /'\\s+/g
@@ -44,7 +45,7 @@ export default class Markdown {
    */
   response (data) {
     return this.useTemplate
-      ? fs.readFileSync('template.html', 'utf-8').replace('{{ markdown }}', data)
+      ? fs.readFileSync(this.templateFile, 'utf-8').replace('{{ markdown }}', data)
       : data.replace(this.headings, this.heading.bind(this)).replace(this.breakline, ' ')
   }
 
