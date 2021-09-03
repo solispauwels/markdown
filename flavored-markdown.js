@@ -35,7 +35,7 @@ export default class Markdown {
    */
   html (markdown) {
     return fetch('https://api.github.com/markdown', this.getOptions(markdown))
-      .then(data => data.text())
+      .then(response => response.text())
       .then(text => this.response(text))
       .catch(error => this.error(error))
   }

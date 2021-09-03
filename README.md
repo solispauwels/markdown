@@ -29,6 +29,12 @@ Global Usage:
 flavored-markdown < markdown.md > markdown.html
 ```
 
+Or for better file escaping text
+
+```sh
+flavored-markdown "$(< markdown.md)" > markdown.html
+```
+
 Or
 
 ```sh
